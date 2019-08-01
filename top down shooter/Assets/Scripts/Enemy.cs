@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject splatter;
     public float speed = 5f;
     public float Enemyhealth = 2f;
-    public GameObject splatter;
+    public float hitScore = 10f;
+    public float killScore = 50f;
 
     private GameObject player;
     private GameObject gameController;
@@ -37,10 +39,10 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("Projectiles"))
         {
             Enemyhealth--;
-            gameController.GetComponent<Score>().score += 10f;
+            gameController.GetComponent<Score>().score += hitScore;
             if(Enemyhealth <= 0)
             {
-                gameController.GetComponent<Score>().score += 50f;
+                gameController.GetComponent<Score>().score += killScore;
                 Instantiate(splatter, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }

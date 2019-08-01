@@ -110,10 +110,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53552fc853cb18c4a9e48f247a316a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  Enemyhealth: 2
   splatter: {fileID: 1537992573143526091, guid: 9907f48065799cf4e8492df11cedd555,
     type: 3}
+  speed: 3
+  Enemyhealth: 1
+  hitScore: 10
+  killScore: 25
 --- !u!50 &6402923552536170864
 Rigidbody2D:
   serializedVersion: 4
