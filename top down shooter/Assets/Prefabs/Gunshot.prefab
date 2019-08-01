@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9116795374177453998}
   - component: {fileID: 9116795374177453999}
   - component: {fileID: -1542912081416571557}
+  - component: {fileID: -2268642741616525275}
   m_Layer: 10
   m_Name: Gunshot
   m_TagString: Projectiles
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.9811321, g: 0.82639116, b: 0.4026344, a: 1}
+  m_Color: {r: 1, g: 0.57198024, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -92,4 +93,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b278575cbb413041afa0a873ae87f80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 15
+--- !u!58 &-2268642741616525275
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9116795374177453996}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.07966341

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float speed = 10f;
+    public float health = 10f;
 
     private Rigidbody2D rb;
     private Vector2 velocity;
@@ -16,6 +17,12 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (health <= 0)
+        {
+            Debug.Log("YOU HAVE DIED!");
+            Destroy(gameObject);
+        }
+
         Vector2 movementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         velocity = movementDirection.normalized * speed;
     }
