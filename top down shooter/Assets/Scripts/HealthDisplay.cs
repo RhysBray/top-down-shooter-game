@@ -19,7 +19,11 @@ public class HealthDisplay : MonoBehaviour
 
     private void Update()
     {
-        health = player.GetComponent<Player>().health.ToString();
-        text.text = "HP: " + health;
+        if(player)
+        {
+            health = player.GetComponent<Player>().health.ToString();
+            text.text = "HP: " + health;
+        }
+        
     }
 }

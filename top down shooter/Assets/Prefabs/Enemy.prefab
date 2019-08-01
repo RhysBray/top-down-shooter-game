@@ -111,6 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  Enemyhealth: 2
+  splatter: {fileID: 1537992573143526091, guid: 9907f48065799cf4e8492df11cedd555,
+    type: 3}
 --- !u!50 &6402923552536170864
 Rigidbody2D:
   serializedVersion: 4

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Projectiles
   - Enemy
+  - Splatter
   layers:
   - Default
   - TransparentFX

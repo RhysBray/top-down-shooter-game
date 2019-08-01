@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed = 5f;
     public float Enemyhealth = 2f;
+    public GameObject splatter;
 
     private GameObject player;
     private GameObject gameController;
@@ -29,6 +30,7 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             player.GetComponent<Player>().health--;
+            Instantiate(splatter, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 
@@ -39,6 +41,7 @@ public class Enemy : MonoBehaviour
             if(Enemyhealth <= 0)
             {
                 gameController.GetComponent<Score>().score += 50f;
+                Instantiate(splatter, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }

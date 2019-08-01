@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public float speed = 10f;
-    public float health = 10f;
+    public float health = 3f;
+    public GameObject splatter;
 
     private Rigidbody2D rb;
     private Vector2 velocity;
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("YOU HAVE DIED!");
+            Instantiate(splatter, transform.position, Quaternion.identity);
             Destroy(gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }

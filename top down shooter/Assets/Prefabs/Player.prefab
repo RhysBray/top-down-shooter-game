@@ -133,7 +133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  health: 2
+  health: 3
+  splatter: {fileID: 1537992573143526091, guid: 9907f48065799cf4e8492df11cedd555,
+    type: 3}
 --- !u!114 &270532598158388448
 MonoBehaviour:
   m_ObjectHideFlags: 0
