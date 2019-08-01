@@ -5,7 +5,6 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public float score = 0;
-    public float timeMultiplierBonus = 1f;
 
     private GameObject player;
 
@@ -18,8 +17,7 @@ public class Score : MonoBehaviour
     {
         if(player)
         {
-            score += Time.deltaTime*5*timeMultiplierBonus;
-            timeMultiplierBonus *= 1.005f;
+            score += Time.deltaTime;
             Debug.Log(score);
         }
     }

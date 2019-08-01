@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e831d668fe7b1b40b632859657ee9a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
 --- !u!4 &267682311
 Transform:
   m_ObjectHideFlags: 0
@@ -1071,7 +1072,7 @@ MonoBehaviour:
   - {fileID: 1900312763}
   - {fileID: 571657362}
   spawnTime: 1.5
-  difficultyMultiplier: 0.98
+  difficultyMultiplier: 0.991
 --- !u!4 &2007736292
 Transform:
   m_ObjectHideFlags: 0

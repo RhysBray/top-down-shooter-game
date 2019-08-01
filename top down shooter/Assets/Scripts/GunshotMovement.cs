@@ -5,22 +5,22 @@ using UnityEngine;
 public class GunshotMovement : MonoBehaviour
 {
     public float speed = 10;
+    public float despawnTime = 2f;
 
-    private Vector2 target;
+    private Vector2 fireDirection;
+    private GameObject player;
 
     private void Start()
     {
-        target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        player = GameObject.FindGameObjectWithTag("Player");
+        fireDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - player.transform.position;
     }
 
     private void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-
-        if (Vector2.Distance(transform.position, target) < 0.1f)
-        {
-            Destroy(gameObject);
-        }
+        transform.Translate(fireDirection.normalized * speed * Time.deltaTime);
+        
+        Destroy(gameObject, despawnTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

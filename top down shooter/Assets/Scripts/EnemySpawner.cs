@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemy;
     public Transform[] spawnPoints;
     public float spawnTime = 2f;
-    public float difficultyMultiplier = 0.995f;
+    public float difficultyMultiplier = 0.998f;
 
     private float spawnTimer;
     private GameObject player;
